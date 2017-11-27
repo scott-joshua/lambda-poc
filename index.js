@@ -4,7 +4,7 @@ exports.handler = (event, context, callback) => {
     currentTime.setTimezone("America/Denver");
     callback(null, {
         statusCode: '200',
-        body: 'The time in Denver is: ' + currentTime.getTime(),
+        body: { "time" : currentTime.getTime()},
     });
 };
 
