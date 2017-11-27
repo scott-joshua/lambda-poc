@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file samTemplate.yaml --lambda-pipline-poc 
-                                   --output-template-file NewSamTemplate.yaml
+      - aws cloudformation package --template-file samTemplate.yaml
+                                   --output-template-file NewSamTemplate.yaml --s3-bucket lambda-pipeline-poc
 artifacts:
   type: zip
   files:
